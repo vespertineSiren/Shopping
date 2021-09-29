@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_auth">
+
+    <action
+        android:id="@+id/display_product_dialog"
+        app:destination="@id/navigation_product_dialog">
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </action>
+
+    <fragment
+        android:id="@+id/navigation_auth"
+        android:name="com.example.shopapp.ui.auth.AuthFragment"
+        android:label="@string/title_auth"
+        tools:layout="@layout/fragment_auth" />
+
+    <fragment
+        android:id="@+id/navigation_product"
+        android:name="com.example.shopapp.ui.product.ProductFragment"
+        android:label="@string/title_product"
+        tools:layout="@layout/fragment_product" />
+
+    <fragment
+        android:id="@+id/navigation_inventory"
+        android:name="com.example.shopapp.ui.inventory.InventoryFragment"
+        android:label="@string/title_inventory"
+        tools:layout="@layout/fragment_inventory" />
+
+    <dialog
+        android:id="@+id/navigation_product_dialog"
+        android:name="com.example.shopapp.ui.product.ProductDialog"
+        android:label="@string/title_product_dialog"
+        tools:layout="@layout/fragment_product">
+
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+
+    </dialog>
+
+</navigation>

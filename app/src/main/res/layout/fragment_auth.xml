@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.AuthFragment">
+
+    <TextView
+        android:id="@+id/textLoggedIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="15dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:minWidth="100dp"
+        android:text="@string/auther_email_text"
+        android:gravity="start"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/textPassword"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextUserEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@id/textUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textUsername"/>
+
+    <TextView
+        android:id="@+id/textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:text="Password"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/textUsername"
+        app:layout_constraintBottom_toTopOf="@id/loginHortensia" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/editTextUserEmail"
+        app:layout_constraintTop_toTopOf="@id/textPassword"/>
+
+    <Button
+        android:id="@+id/loginHortensia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:minHeight="50dp"
+        android:text="@string/login_hortensia_button_text"
+        app:layout_constraintBottom_toTopOf="@id/loginTamar"/>
+
+    <Button
+        android:id="@+id/loginTamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:minHeight="50dp"
+        android:text="@string/login_tamar_button_text"
+        app:layout_constraintBottom_toTopOf="@id/loginTruman"/>
+
+    <Button
+        android:id="@+id/loginTruman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:minHeight="50dp"
+        android:text="@string/login_truman_button_text"
+        app:layout_constraintBottom_toTopOf="@id/loginMichelina"/>
+
+    <Button
+        android:id="@+id/loginMichelina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:minHeight="50dp"
+        android:text="@string/login_michelina_button_text"
+        app:layout_constraintBottom_toTopOf="@id/loginButton"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:enabled="false"
+        android:minHeight="50dp"
+        android:text="@string/login_button_text"
+        app:layout_constraintBottom_toTopOf="@id/logoutButton"/>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:enabled="false"
+        android:layout_marginBottom="10dp"
+        android:minHeight="50dp"
+        android:text="@string/logout_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ShopApp</string>
+    <string name="title_auth">Auth</string>
+    <string name="title_product">Product</string>
+    <string name="title_product_dialog">Product_Dialog</string>
+    <string name="title_inventory">Inventory</string>
+    <string name="login_hortensia_button_text">Login as hortensia.dollison</string>
+    <string name="login_truman_button_text">Login as truman.marcos</string>
+    <string name="login_michelina_button_text">Login as michelina.corvin</string>
+    <string name="login_button_text">Login</string>
+    <string name="auther_email_text">Email</string>
+    <string name="login_tamar_button_text">Login as tamar.poyer</string>
+    <string name="logout_button_text">Logout</string>
+
+    <string name="row_product_name">Name: %s</string>
+    <string name="row_product_brand">Brand: %s</string>
+    <string name="row_product_shipping_price">Shipping Price: %s</string>
+    <string name="row_product_style">Style: %s</string>
+    <string name="row_product_type">Type: %s</string>
+
+</resources>

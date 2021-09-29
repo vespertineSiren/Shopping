@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detailNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        app:layout_constraintBottom_toBottomOf="@id/detailNameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailNameEditText"/>
+
+    <EditText
+        android:id="@+id/detailNameEditText"
+        android:layout_width="wrap_content"
+        android:minWidth="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:hint="Some Product Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detailNameTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detailStyleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:text="Style:"
+        app:layout_constraintBottom_toBottomOf="@id/detailSpinnerStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailSpinnerStyle"/>
+
+    <Spinner
+        android:id="@+id/detailSpinnerStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/detailNameEditText"
+        app:layout_constraintStart_toStartOf="@id/detailNameEditText"
+        app:layout_constraintTop_toBottomOf="@id/detailNameEditText"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detailBrandTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:text="Brand:"
+        app:layout_constraintBottom_toBottomOf="@id/detailBrandEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailBrandEditText"/>
+
+    <EditText
+        android:id="@+id/detailBrandEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Some Brand Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detailBrandTextView"
+        app:layout_constraintTop_toBottomOf="@id/detailSpinnerStyle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detailPriceTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:text="Ship Price:"
+        app:layout_constraintBottom_toBottomOf="@id/detailPriceEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailPriceEditText"/>
+
+    <EditText
+        android:id="@+id/detailPriceEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Price in Pennies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detailPriceTextView"
+        app:layout_constraintTop_toBottomOf="@id/detailBrandEditText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detailDescTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:text="Desc:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailDescEditText"/>
+
+    <EditText
+        android:id="@+id/detailDescEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="top|start"
+        android:hint="Put a product description here. Can be really long"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="10"
+        android:minLines="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detailPriceTextView"
+        app:layout_constraintTop_toBottomOf="@id/detailPriceEditText" />
+
+    <Button
+        android:id="@+id/detailSaveButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="15dp"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/detailDescEditText" />
+
+    <Button
+        android:id="@+id/detailCancelButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/detailSaveButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
