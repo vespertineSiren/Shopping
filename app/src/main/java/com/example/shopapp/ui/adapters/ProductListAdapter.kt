@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.shopapp.R
 import com.example.shopapp.extensions.centsToDollarsFormat
 import com.example.shopapp.models.product.Product
@@ -38,7 +40,15 @@ class ProductListAdapter(
         private val buttonProductDesc: Button =
             view.findViewById(R.id.rowProductDesc)
 
+        private val imageProduct: ImageView =
+            view.findViewById(R.id.rowProductImage)
+
         override fun onBind(data: Product, listener: ((Product) -> Unit)?) {
+
+            Glide.with(imageProduct.context)
+                .load("https://picsum.photos/100?random=${data.id}")
+                .fitCenter()
+                .into(imageProduct)
 
             textProductName.text = view.context.getString(
                 R.string.row_product_name,
